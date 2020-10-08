@@ -27,19 +27,18 @@ If you use this code in an academic context, please cite the following work:
 Clone the repo *recursively with submodules*
 
 ```bash
-git clone git@github.com:uzh-rpg/rpg_vid2e.git --recursive
+git clone https://github.com/miried/rpg_vid2e.git --recursive
 ```
 
 ## Installation with [Anaconda](https://www.anaconda.com/distribution/)
-Adapt the CUDA toolkit version according to your setup. 
+Run the following commands
 
 ```bash
-cuda_version=10.1
-
-conda create -y -n vid2e python=3.7
+conda create -y -n vid2e
 conda activate vid2e
-conda install -y pytorch torchvision cudatoolkit=$cuda_version -c pytorch
-conda install -y -c conda-forge opencv tqdm scikit-video eigen boost boost-cpp pybind11
+
+conda install -y pytorch torchvision cudatoolkit opencv tqdm eigen boost boost-cpp pybind11 jupyterlab matplotlib
+conda install -y -c conda-forge scikit-video
 ```
 
 Build the python bindings for ESIM
