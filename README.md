@@ -47,6 +47,7 @@ Build the python bindings for ESIM
 cd esim_py
 pip install .
 ```
+Perfect! Now you can open the Jupyter notebook and convert your own video. You may also use the `drop.avi` example.
 
 ## Adaptive Upsampling
 *This package provides code for adaptive upsampling with frame interpolation based on [Super-SloMo](https://people.cs.umass.edu/~hzjiang/projects/superslomo/)*
