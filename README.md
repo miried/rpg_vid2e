@@ -31,6 +31,7 @@ git clone https://github.com/miried/rpg_vid2e.git --recursive
 ```
 
 ## Installation with [Anaconda](https://www.anaconda.com/distribution/)
+_Note: The student workstations in the computer lab have a disk quota for your home directory of 5GB. The following works only on your own computer. If you are using the student workstations, see "Using /scratch/"_
 Run the following commands
 
 ```bash
@@ -39,6 +40,21 @@ conda activate vid2e
 
 conda install -y pytorch torchvision cudatoolkit opencv tqdm eigen boost boost-cpp pybind11 jupyterlab matplotlib
 conda install -y -c conda-forge scikit-video
+```
+
+### Using /scratch/
+If you get a disk quota error, then anaconda filled up your home directory. You can clear up some space with
+```bash
+conda remove --name vid2e --all
+conda clean --all
+```
+and then make a new environment on `/scratch/`. `/scratch/` is a file system local on your workstation which does not have a quota. Create your own subdirectory with
+```bash
+mkdir /scratch/$USER
+```
+and then make the conda environment with
+```bash
+conda create --prefix /scratch/$USER/vid2e
 ```
 
 Build the python bindings for ESIM
