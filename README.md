@@ -32,6 +32,7 @@ git clone https://github.com/miried/rpg_vid2e.git --recursive
 
 ## Installation with [Anaconda](https://www.anaconda.com/distribution/)
 _Note: The student workstations in the computer lab have a disk quota for your home directory of 5GB. The following works only on your own computer. If you are using the student workstations, see "Using /scratch/"_
+
 Run the following commands
 
 ```bash
