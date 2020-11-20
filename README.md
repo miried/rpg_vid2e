@@ -23,7 +23,16 @@ If you use this code in an academic context, please cite the following work:
 }
 ```
 
-## Installation
+## Basic setup
+
+Either on your own computer, or SSH into one of the student workstations (works also from Windows, just open a PowerShell)
+```bash
+ssh ethz-username@tardis-a10.ee.ethz.ch
+```
+or replace `10` with another number.
+
+### Installation
+
 Clone the repo *recursively with submodules*
 
 ```bash
@@ -43,6 +52,7 @@ conda install -y pytorch torchvision cudatoolkit opencv tqdm eigen boost boost-c
 conda install -y -c conda-forge scikit-video
 ```
 
+
 ### Using /scratch/
 If you get a disk quota error, then anaconda filled up your home directory. You can clear up some space with
 ```bash
@@ -57,6 +67,8 @@ and then make the conda environment with
 ```bash
 conda create --prefix /scratch/$USER/vid2e
 ```
+
+### Installing ESIM
 
 Build the python bindings for ESIM
 
