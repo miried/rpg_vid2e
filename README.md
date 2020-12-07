@@ -25,7 +25,7 @@ If you use this code in an academic context, please cite the following work:
 
 ## Basic setup
 
-### Ready to use
+### Ready-to-use Python environment
 
 SSH into one of the student workstations
 ```bash
@@ -38,7 +38,7 @@ conda activate vid2e
 ```
 Then the Python environment is ready to use.
 
-### Manual installation
+### Project code
 
 Clone the repo *recursively with submodules*
 
@@ -46,7 +46,17 @@ Clone the repo *recursively with submodules*
 git clone https://github.com/miried/rpg_vid2e.git --recursive
 ```
 
-## Installation with [Anaconda](https://www.anaconda.com/distribution/)
+### Installing ESIM
+
+Build the python bindings for ESIM
+
+```bash
+cd esim_py
+pip install .
+```
+Perfect! Now you can open the Jupyter notebook and convert your own video. You may also use the `drop.avi` example.
+
+### Install your own Python environment with [Anaconda](https://www.anaconda.com/distribution/)
 _Note: The student workstations in the computer lab have a disk quota for your home directory of 5GB. The following works only on your own computer. If you are using the student workstations, see "Using /scratch/"_
 
 Run the following commands
@@ -60,7 +70,7 @@ conda install -y -c conda-forge scikit-video
 ```
 
 
-### Using /scratch/
+#### Using /scratch/
 If you get a disk quota error, then anaconda filled up your home directory. You can clear up some space with
 ```bash
 conda remove --name vid2e --all
@@ -74,16 +84,6 @@ and then make the conda environment with
 ```bash
 conda create --prefix /scratch/$USER/vid2e
 ```
-
-### Installing ESIM
-
-Build the python bindings for ESIM
-
-```bash
-cd esim_py
-pip install .
-```
-Perfect! Now you can open the Jupyter notebook and convert your own video. You may also use the `drop.avi` example.
 
 ## Adaptive Upsampling
 *This package provides code for adaptive upsampling with frame interpolation based on [Super-SloMo](https://people.cs.umass.edu/~hzjiang/projects/superslomo/)*
