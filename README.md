@@ -36,7 +36,7 @@ where `NN` is a number, e.g. 08. Then run
 source /home/mirieder/.bashrc_miniconda3
 conda activate vid2e
 ```
-Then the Python environment is ready to use.
+Then the Python environment is ready to use. You can run `jupyter-lab --no-browser` to start the Jupyter environment.
 
 ### Project code
 
