@@ -25,13 +25,20 @@ If you use this code in an academic context, please cite the following work:
 
 ## Basic setup
 
-Either on your own computer, or SSH into one of the student workstations (works also from Windows, just open a PowerShell)
-```bash
-ssh ethz-username@tardis-a10.ee.ethz.ch
-```
-or replace `10` with another number.
+### Ready to use
 
-### Installation
+SSH into one of the student workstations
+```bash
+ssh ethz-username@tardis-aNN.ee.ethz.ch
+```
+where `NN` is a number, e.g. 08. Then run
+```bash
+source /home/mirieder/.bashrc_miniconda3
+conda activate vid2e
+```
+Then the Python environment is ready to use.
+
+### Manual installation
 
 Clone the repo *recursively with submodules*
 
